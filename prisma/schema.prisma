@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+}
+
+model Process {
+  id               Int      @id @default(autoincrement())
+  name             String
+  surname          String
+  purposeOfRequest String?
+  mailingAddress   String
+  dataStart        DateTime
+  Responsible      String
+  status           Int //[1=in guiche, 2 = vice-gover, 3 = analise ténice, 4 = Analise técinca concluida, 5 = anexar croquis, se croquis anexado 6 = entrou no gab govern, 6 = gover aceitou, ou no 4 passo for null o documento é arquivado]
+}

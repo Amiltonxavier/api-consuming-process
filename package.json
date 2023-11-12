@@ -1,0 +1,22 @@
+{
+  "name": "api-process",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@fastify/cors": "^8.4.1",
+    "@prisma/client": "^5.5.2",
+    "fastify": "^4.24.3",
+    "fastify-cors": "^6.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.5.2"
+  }
+}
